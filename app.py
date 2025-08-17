@@ -38,7 +38,10 @@ def gen_response(prompt):
 
 
 interface = gr.Interface(
+    title="CodeJarvis: Simple Code Assistant using Codellama",
     fn = gen_response,
-    inputs = gr.Textbox(lines = 4, placeholder = "Enter your prompt"),
-    output = "text"
+    inputs = gr.Textbox(lines = 1, placeholder = "Enter your prompt"),
+    outputs = "text"
 )
+
+interface.launch()
